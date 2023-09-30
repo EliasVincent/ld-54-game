@@ -1,8 +1,31 @@
-[gd_scene format=3 uid="uid://cbdjmr8d2mkr1"]
+[gd_scene load_steps=5 format=3 uid="uid://cbdjmr8d2mkr1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7p3yc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_whrbw"]
+
+[sub_resource type="Sky" id="Sky_7o83a"]
+sky_material = SubResource("ProceduralSkyMaterial_whrbw")
+
+[sub_resource type="Environment" id="Environment_y4eum"]
+background_mode = 2
+sky = SubResource("Sky_7o83a")
 
 [node name="World1" type="Node3D"]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 202.0
-offset_bottom = 93.0
-text = "Hallo"
+offset_right = 319.0
+offset_bottom = 115.0
+text = "Hallo, das hier ist nur eine Testwelt"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_7p3yc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_y4eum")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1, 1)
