@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cbdjmr8d2mkr1"]
+
+[node name="World1" type="Node3D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 202.0
+offset_bottom = 93.0
+text = "Hallo"
