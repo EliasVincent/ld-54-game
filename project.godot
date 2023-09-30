@@ -15,6 +15,10 @@ run/main_scene="res://scenes/world_1.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/tbloader/plugin.cfg")
+
 [input]
 
 forward={
