@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjyrg3k73ccb"]
+
+[ext_resource type="Script" path="res://ui/loadout_ui.gd" id="1_mlh0e"]
+
+[node name="loadout_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mlh0e")
+
+[node name="MemoryRemaining" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 65.0
+offset_right = 337.0
+offset_bottom = 133.0
+text = "10 MB"
+
+[node name="UpgradeContainer" type="FlowContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -424.0
+offset_top = -84.0
+offset_right = 520.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HPUpgrade" type="Button" parent="UpgradeContainer"]
+layout_mode = 2
+text = "ADD HP (-2 MB)"
+
+[node name="SpeedUpgrade" type="Button" parent="UpgradeContainer"]
+layout_mode = 2
+text = "ADD SPEED (-4 MB)"
+
+[node name="StatsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 25.0
+offset_right = -30.0
+offset_bottom = 265.0
+grow_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StatsContainer"]
+layout_mode = 2
+text = "STATS"
+fit_content = true
+
+[node name="CurrentHP" type="RichTextLabel" parent="StatsContainer"]
+layout_mode = 2
+text = "HP"
+fit_content = true
+
+[node name="CurrentSpeed" type="RichTextLabel" parent="StatsContainer"]
+layout_mode = 2
+text = "SPEED"
+fit_content = true
+
+[connection signal="pressed" from="UpgradeContainer/HPUpgrade" to="." method="_on_hp_upgrade_pressed"]
+[connection signal="pressed" from="UpgradeContainer/SpeedUpgrade" to="." method="_on_speed_upgrade_pressed"]
