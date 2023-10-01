@@ -19,6 +19,6 @@ func _process(delta):
 
 func _on_timer_timeout():
 	var bullet = spawn_object.instantiate()
-	bullet.global_position = self.global_position
-	add_child(bullet)
+	bullet.global_position = Vector3(global_position.x , global_position.y + 1, global_position.z)
+	get_parent().add_child(bullet)
 	print("Bullet Spawned!")
