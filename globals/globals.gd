@@ -1,10 +1,19 @@
 extends Node
 
 var isFS: bool = false
-var playerHp: int = 100
-var playerSpeed: int = 100
+var memory: int = 10 # in MB
 
 var targetsToHit: int = 10
+
+# TODO: tatsaechliche stats
+# Wir koennen es so machen: entweder diese Stats sind die
+# Ausgangsstats, also resetten sich sich jedes mal, 
+# oder man nimmt sie mit. Also wenn man im letzten level
+# 50 hp verloren hat, kann man sich gegen Memory heilen
+var PLAYER_STATS = {
+	PLAYER_HP = 100,
+	PLAYER_SPEED = 100
+}
 
 func _input(event):
 	if Input.is_action_just_pressed("fullscreen"):
