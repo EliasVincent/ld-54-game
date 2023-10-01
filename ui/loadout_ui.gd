@@ -7,6 +7,7 @@ extends Control
 @onready var current_speed = $StatsContainer/CurrentSpeed
 
 @onready var error_sound = $Audio/ErrorSound
+@onready var upgrade_success_sound = $Audio/UpgradeSuccessSound
 
 
 
@@ -40,4 +41,6 @@ func apply_upgrade(memoryToSubtract: int, PLAYER_STAT, amountToAdd):
 			Globals.PLAYER_STATS.PLAYER_SPEED += amountToAdd
 	
 	Globals.memory -= memoryToSubtract
+	upgrade_success_sound.play()
+
 
