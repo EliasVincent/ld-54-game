@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjyrg3k73ccb"]
+[gd_scene load_steps=3 format=3 uid="uid://bjyrg3k73ccb"]
 
 [ext_resource type="Script" path="res://ui/loadout_ui.gd" id="1_mlh0e"]
+[ext_resource type="AudioStream" uid="uid://botiijpxkyqam" path="res://assets/audio/sfx/error1.wav" id="2_kvabq"]
 
 [node name="loadout_ui" type="Control"]
 layout_mode = 3
@@ -66,6 +67,12 @@ fit_content = true
 layout_mode = 2
 text = "SPEED"
 fit_content = true
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("2_kvabq")
+volume_db = -4.809
 
 [connection signal="pressed" from="UpgradeContainer/HPUpgrade" to="." method="_on_hp_upgrade_pressed"]
 [connection signal="pressed" from="UpgradeContainer/SpeedUpgrade" to="." method="_on_speed_upgrade_pressed"]

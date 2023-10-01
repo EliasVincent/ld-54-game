@@ -6,6 +6,10 @@ extends Control
 @onready var current_hp = $StatsContainer/CurrentHP
 @onready var current_speed = $StatsContainer/CurrentSpeed
 
+@onready var error_sound = $Audio/ErrorSound
+
+
+
 func _ready():
 	pass
 
@@ -26,7 +30,8 @@ func _on_speed_upgrade_pressed():
 # Modulares upgraden mit checks und so weiter
 func apply_upgrade(memoryToSubtract: int, PLAYER_STAT, amountToAdd):
 	if memoryToSubtract > Globals.memory:
-		print("NOT ENOUGH MEMORY") # TODO: error sound
+		print("NOT ENOUGH MEMORY")
+		error_sound.play()
 		return
 	match PLAYER_STAT:
 		"PLAYER_HP":
