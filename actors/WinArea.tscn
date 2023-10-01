@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgyfb2u6n33yd"]
+
+[ext_resource type="Script" path="res://actors/WinArea.gd" id="1_emlu0"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6qal7"]
+radius = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bj00j"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.188235)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jatbp"]
+material = SubResource("StandardMaterial3D_bj00j")
+top_radius = 2.0
+bottom_radius = 2.0
+
+[node name="WinArea" type="Area3D"]
+script = ExtResource("1_emlu0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_6qal7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_jatbp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

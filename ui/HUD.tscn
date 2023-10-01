@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://mr75x2dmdqmy"]
+
+[ext_resource type="Script" path="res://ui/HUD.gd" id="1_vqu6j"]
+[ext_resource type="Theme" uid="uid://o0f50tgvg56p" path="res://ui/ui_theme.tres" id="2_yqvnn"]
+[ext_resource type="Texture2D" uid="uid://cavepcg6i2l00" path="res://assets/ui/crosshair1.png" id="3_lou6b"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vqu6j")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -117.0
+offset_right = 85.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="TimerLabel" type="RichTextLabel" parent="CenterContainer"]
+layout_mode = 2
+theme = ExtResource("2_yqvnn")
+bbcode_enabled = true
+text = "[center]300[/center]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Container" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Container"]
+texture = ExtResource("3_lou6b")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 853.0
+offset_top = 486.0
+offset_right = 1127.0
+offset_bottom = 608.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -286.0
+offset_top = -153.0
+offset_right = -25.0
+offset_bottom = -27.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HPLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+text = "HP: "
+fit_content = true
+
+[node name="TargetsLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+text = "TARGETS:"
+fit_content = true

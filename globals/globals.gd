@@ -1,5 +1,9 @@
 extends Node
 
+# Timer eines Levels
+var initialGameTimer: int = 250
+var currentGameTimer : int
+
 var isFS: bool = false
 var memory: int = 10 # in MB
 
@@ -15,6 +19,9 @@ var PLAYER_STATS = {
 	PLAYER_SPEED = 100
 }
 
+func _ready():
+	currentGameTimer = initialGameTimer
+
 func _input(event):
 	if Input.is_action_just_pressed("fullscreen"):
 		if isFS:
@@ -29,3 +36,12 @@ func _input(event):
 	if Input.is_action_just_pressed("mute"):
 		AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0))
 		
+
+# TODO: func for level init
+
+# TODO: func for handle win condition
+func handleLevelWin():
+	pass
+
+func handleLevelTimerTimeout():
+	print("globals.handleLevelTimerTimeout called. Game over!?")
