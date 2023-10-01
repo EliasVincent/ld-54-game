@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://crn8l7q5orhg7"]
+[gd_scene load_steps=6 format=3 uid="uid://crn8l7q5orhg7"]
 
 [ext_resource type="Texture2D" uid="uid://kn1msfkvsktn" path="res://textures/black.png" id="1_o7qhq"]
+[ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="2_fes0c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0221p"]
 albedo_texture = ExtResource("1_o7qhq")
@@ -45,3 +46,6 @@ mesh = SubResource("ArrayMesh_7xm03")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TBLoader/Default Layer/entity_0_geometry_col"]
 shape = SubResource("ConcavePolygonShape3D_i1v6p")
+
+[node name="player" parent="." instance=ExtResource("2_fes0c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.23515, 0)
