@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjyrg3k73ccb"]
+[gd_scene load_steps=5 format=3 uid="uid://bjyrg3k73ccb"]
 
+[ext_resource type="Theme" uid="uid://o0f50tgvg56p" path="res://ui/ui_theme.tres" id="1_3mm8k"]
 [ext_resource type="Script" path="res://ui/loadout_ui.gd" id="1_mlh0e"]
 [ext_resource type="AudioStream" uid="uid://botiijpxkyqam" path="res://assets/audio/sfx/error1.wav" id="2_kvabq"]
+[ext_resource type="AudioStream" uid="uid://clujv1rpg4wh0" path="res://assets/audio/sfx/upgrade_succes_short.wav" id="3_3w80i"]
 
 [node name="loadout_ui" type="Control"]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_3mm8k")
 script = ExtResource("1_mlh0e")
 
 [node name="MemoryRemaining" type="RichTextLabel" parent="."]
@@ -72,7 +75,11 @@ fit_content = true
 
 [node name="ErrorSound" type="AudioStreamPlayer" parent="Audio"]
 stream = ExtResource("2_kvabq")
-volume_db = -4.809
+volume_db = -7.214
+
+[node name="UpgradeSuccessSound" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("3_3w80i")
+volume_db = -2.404
 
 [connection signal="pressed" from="UpgradeContainer/HPUpgrade" to="." method="_on_hp_upgrade_pressed"]
 [connection signal="pressed" from="UpgradeContainer/SpeedUpgrade" to="." method="_on_speed_upgrade_pressed"]
