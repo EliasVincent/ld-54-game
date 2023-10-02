@@ -46,7 +46,9 @@ func _input(event):
 
 # TODO: func for handle win condition
 func handleLevelWin():
-	pass
+	print("WIN")
+	get_tree().change_scene_to_file("res://ui/game_win.tscn")
 
 func handleLevelTimerTimeout():
 	print("globals.handleLevelTimerTimeout called. Game over!?")
+	get_tree().change_scene_to_file("res://ui/game_over.tscn")

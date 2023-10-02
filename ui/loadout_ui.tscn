@@ -102,6 +102,24 @@ volume_db = -7.214
 stream = ExtResource("3_3w80i")
 volume_db = -2.404
 
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -274.0
+offset_top = -178.0
+offset_right = 291.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DeployButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "DEPLOY"
+
 [connection signal="pressed" from="UpgradeContainer/HPUpgrade" to="." method="_on_hp_upgrade_pressed"]
 [connection signal="pressed" from="UpgradeContainer/SpeedUpgrade" to="." method="_on_speed_upgrade_pressed"]
 [connection signal="toggled" from="UpgradeContainer/HPUpgradeToggle" to="." method="_on_hp_upgrade_toggle_toggled"]
@@ -109,3 +127,4 @@ volume_db = -2.404
 [connection signal="toggled" from="UpgradeContainer/DamageUpgradeToggle" to="." method="_on_damage_upgrade_toggle_toggled"]
 [connection signal="toggled" from="UpgradeContainer/HUDUpgradeToggle" to="." method="_on_hud_upgrade_toggle_toggled"]
 [connection signal="toggled" from="UpgradeContainer/SpeedUpgradeToggle" to="." method="_on_speed_upgrade_toggle_toggled"]
+[connection signal="pressed" from="VBoxContainer/DeployButton" to="." method="_on_deploy_button_pressed"]

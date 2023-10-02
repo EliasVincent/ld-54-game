@@ -100,3 +100,7 @@ func _on_speed_upgrade_toggle_toggled(button_pressed):
 		apply_upgrade(2, "PLAYER_SPEED", 0.5)
 	else:
 		apply_downgrade(2, "PLAYER_SPEED", 0.5)
+
+
+func _on_deploy_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/level1.tscn")

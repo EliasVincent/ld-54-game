@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Globals="*res://globals/globals.gd"
 GlobalLogic="*res://globals/GlobalLogic.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/tbloader/plugin.cfg")
