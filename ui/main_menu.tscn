@@ -29,10 +29,6 @@ grow_vertical = 2
 layout_mode = 2
 text = "START"
 
-[node name="Loadout" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "LOADOUT"
-
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "QUIT"
@@ -81,5 +77,4 @@ text = "M: Mute"
 fit_content = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Loadout" to="." method="_on_loadout_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

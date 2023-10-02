@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk20b28iiepm8"]
+[gd_scene load_steps=6 format=3 uid="uid://bk20b28iiepm8"]
 
 [ext_resource type="Script" path="res://actors/bullet.gd" id="1_qj2nh"]
 
@@ -10,7 +10,12 @@ material = SubResource("StandardMaterial3D_qdrml")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cj25j"]
 
-[node name="bullet" type="CharacterBody3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_rpvw2"]
+radius = 0.51
+
+[node name="bullet" type="CharacterBody3D" groups=["BULLET"]]
+collision_layer = 3
+collision_mask = 2
 script = ExtResource("1_qj2nh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -18,3 +23,11 @@ mesh = SubResource("SphereMesh_6eftw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_cj25j")
+disabled = true
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_rpvw2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

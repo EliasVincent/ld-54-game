@@ -3,11 +3,11 @@ extends StaticBody3D
 @export var spawn_object: PackedScene
 var playerPos
 
-# Called when the node enters the scene tree for the first time.
+@export var turretHP: float = 3.0
+
 func _ready():
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	playerPos = Vector3(get_tree().get_nodes_in_group("PLAYER")[0].global_position.x, 
 	global_position.y, 
@@ -21,8 +21,10 @@ func _on_timer_timeout():
 	var bullet = spawn_object.instantiate()
 	bullet.global_position = Vector3(global_position.x , global_position.y + 1, global_position.z)
 	get_parent().add_child(bullet)
-	print("Bullet Spawned!")
+	#print("Bullet Spawned!")
 
-func get_hit():
-	# TODO: HP and so son and so on and aaa
-	pass
+func get_hit(damage):
+	turretHP -= damage
+	if turretHP <= 0.0:
+		#TODO: animationplayer with sound and effects
+		self.queue_free()

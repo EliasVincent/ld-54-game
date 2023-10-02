@@ -9,6 +9,11 @@ var memory: int = 8 # in MB
 
 var targetsToHit: int = 10
 
+var machineGunShootDelay: float = 0.5
+var machineGunDamage: float = 1.0
+
+var hudEnabled: bool = true
+
 # TODO: tatsaechliche stats
 # Wir koennen es so machen: entweder diese Stats sind die
 # Ausgangsstats, also resetten sich sich jedes mal, 
@@ -41,7 +46,9 @@ func _input(event):
 
 # TODO: func for handle win condition
 func handleLevelWin():
-	pass
+	print("WIN")
+	get_tree().change_scene_to_file("res://ui/game_win.tscn")
 
 func handleLevelTimerTimeout():
 	print("globals.handleLevelTimerTimeout called. Game over!?")
+	get_tree().change_scene_to_file("res://ui/game_over.tscn")
