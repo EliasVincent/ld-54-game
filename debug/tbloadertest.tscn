@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://crn8l7q5orhg7"]
+[gd_scene load_steps=14 format=3 uid="uid://crn8l7q5orhg7"]
 
-[ext_resource type="Texture2D" uid="uid://d0ru0dg4djllu" path="res://textures/dirt.png" id="1_fu6bj"]
+[ext_resource type="Texture2D" uid="uid://vwywo566yonx" path="res://textures/dirt.png" id="1_fu6bj"]
 [ext_resource type="Texture2D" uid="uid://kn1msfkvsktn" path="res://textures/black.png" id="1_o7qhq"]
-[ext_resource type="Texture2D" uid="uid://c2v6q3f20jgyr" path="res://textures/white_test_cube.png" id="1_oa5lf"]
 [ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="3_81ces"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ipon"]
@@ -104,5 +103,6 @@ shape = SubResource("SphereShape3D_joxm7")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14, 3, 0)
+current = true
 
 [node name="player" parent="." instance=ExtResource("3_81ces")]

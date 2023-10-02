@@ -22,11 +22,12 @@ func _process(delta):
 
 
 func _on_hp_upgrade_pressed():
-	apply_upgrade(2, "PLAYER_HP", 20)
+	apply_upgrade(3, "PLAYER_HP", 20)
 
 
 func _on_speed_upgrade_pressed():
-	apply_upgrade(4, "PLAYER_SPEED", 50)
+	apply_upgrade(4, "PLAYER_SPEED", 0.5)
+	
 
 # Modulares upgraden mit checks und so weiter
 func apply_upgrade(memoryToSubtract: int, PLAYER_STAT, amountToAdd):

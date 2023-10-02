@@ -15,8 +15,8 @@ extends CharacterBody3D
 var current_speed = 5.0
 
 const walking_speed = 5.0
-const sprinting_speed = 8.0
-const crouching_speed = 3.0
+var sprinting_speed = 8.0 * Globals.PLAYER_STATS.PLAYER_SPEED
+var crouching_speed = 3.0
 
 # states
 var walking = false
@@ -29,7 +29,7 @@ var dodging = false
 var dodge_timer = 0.0
 var dodge_timer_max = 0.8
 var dodge_vector = Vector2.ZERO
-var dodge_speed = 10.0
+var dodge_speed = 10.0 * Globals.PLAYER_STATS.PLAYER_SPEED
 var dodge_side = 0
 
 # head bobbing vars
@@ -46,7 +46,7 @@ var head_bobbing_index = 0.0
 var head_bobbing_current_intensity = 0.0
 
 # movement cars
-var crouching_depth = -0.5
+var crouching_depth = -0.8
 
 const jump_velocity = 5.0
 

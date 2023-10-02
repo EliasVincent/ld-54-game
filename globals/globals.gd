@@ -5,7 +5,7 @@ var initialGameTimer: int = 250
 var currentGameTimer : int
 
 var isFS: bool = false
-var memory: int = 10 # in MB
+var memory: int = 8 # in MB
 
 var targetsToHit: int = 10
 
@@ -16,7 +16,7 @@ var targetsToHit: int = 10
 # 50 hp verloren hat, kann man sich gegen Memory heilen
 var PLAYER_STATS = {
 	PLAYER_HP = 100,
-	PLAYER_SPEED = 100
+	PLAYER_SPEED = 1.5
 }
 
 func _ready():
