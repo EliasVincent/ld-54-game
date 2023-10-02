@@ -20,3 +20,8 @@ func _process(delta):
 	numOfTurretsInScene = turrets.get_child_count()
 	Globals.targetsToHit = numOfTurretsInScene
 
+
+
+func _on_death_area_body_entered(body):
+	if body.is_in_group("PLAYER"):
+		get_tree().change_scene_to_file("res://ui/game_over.tscn")

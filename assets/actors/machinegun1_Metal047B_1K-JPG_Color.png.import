@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clvlb8dvng3gs"
-path.s3tc="res://.godot/imported/pipes.png-974a8f23293cad6fc4245beb4d4ce848.s3tc.ctex"
+uid="uid://c7mwpvw7mv26j"
+path.s3tc="res://.godot/imported/machinegun1_Metal047B_1K-JPG_Color.png-3a37b76e56b79c15eb0a787d898f380d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://textures/pipes.png"
-dest_files=["res://.godot/imported/pipes.png-974a8f23293cad6fc4245beb4d4ce848.s3tc.ctex"]
+source_file="res://assets/actors/machinegun1_Metal047B_1K-JPG_Color.png"
+dest_files=["res://.godot/imported/machinegun1_Metal047B_1K-JPG_Color.png-3a37b76e56b79c15eb0a787d898f380d.s3tc.ctex"]
 
 [params]
 

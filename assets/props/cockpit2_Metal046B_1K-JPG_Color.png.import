@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clvlb8dvng3gs"
-path.s3tc="res://.godot/imported/pipes.png-974a8f23293cad6fc4245beb4d4ce848.s3tc.ctex"
+uid="uid://doth6p4jjl8g8"
+path.s3tc="res://.godot/imported/cockpit2_Metal046B_1K-JPG_Color.png-a5368724a917b23301530b9f5c363aa2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://textures/pipes.png"
-dest_files=["res://.godot/imported/pipes.png-974a8f23293cad6fc4245beb4d4ce848.s3tc.ctex"]
+source_file="res://assets/props/cockpit2_Metal046B_1K-JPG_Color.png"
+dest_files=["res://.godot/imported/cockpit2_Metal046B_1K-JPG_Color.png-a5368724a917b23301530b9f5c363aa2.s3tc.ctex"]
 
 [params]
 
