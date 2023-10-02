@@ -231,7 +231,11 @@ func _physics_process(delta):
 	# shoot auto
 	if Input.is_action_pressed("shoot"):
 		weapon_manager.shoot_auto(Globals.machineGunShootDelay, Globals.machineGunDamage)
-	
+
+func _process(delta):
+	if self.global_position.y <= -100:
+		get_tree().change_scene_to_file("res://ui/game_over.tscn")
+
 func get_hit():
 	# CURRENT HP - 1, alle machen gleich viel Schaden erstmal
 	print("HURT")
