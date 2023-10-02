@@ -2,6 +2,7 @@ extends Node
 
 @onready var game_timer = $GameTimer
 
+@onready var hit_sound = $Sounds/HitSound
 
 # TODO: erst starten wenn auf level geklickt
 func _ready():
@@ -16,3 +17,6 @@ func _on_game_timer_timeout():
 func start_level_timer():
 	game_timer.wait_time = Globals.initialGameTimer
 	game_timer.start()
+
+func playHitSound():
+	hit_sound.play()

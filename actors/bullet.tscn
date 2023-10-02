@@ -30,4 +30,9 @@ disabled = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_rpvw2")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

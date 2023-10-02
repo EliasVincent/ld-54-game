@@ -24,3 +24,7 @@ func _on_area_3d_body_entered(body):
 		pass
 	else:
 		self.queue_free()
+
+
+func _on_timer_timeout():
+	self.queue_free()

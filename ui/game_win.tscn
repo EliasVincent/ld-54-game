@@ -14,6 +14,7 @@ theme = ExtResource("1_7aksd")
 script = ExtResource("1_sirex")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1180.0
 offset_bottom = 677.0
 color = Color(0, 0, 0, 1)

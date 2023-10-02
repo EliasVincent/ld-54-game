@@ -1,11 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://icib10iram6s"]
+[gd_scene load_steps=3 format=3 uid="uid://icib10iram6s"]
 
 [ext_resource type="Script" path="res://globals/GlobalLogic.gd" id="1_ics25"]
+[ext_resource type="AudioStream" uid="uid://1kl5t4wlaj8d" path="res://assets/audio/sfx/hit1.wav" id="2_5k3fj"]
 
 [node name="GlobalLogic" type="Node"]
 script = ExtResource("1_ics25")
 
 [node name="GameTimer" type="Timer" parent="."]
 wait_time = 300.0
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="HitSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("2_5k3fj")
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

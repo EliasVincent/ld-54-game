@@ -24,6 +24,7 @@ func _on_timer_timeout():
 	#print("Bullet Spawned!")
 
 func get_hit(damage):
+	GlobalLogic.playHitSound()
 	turretHP -= damage
 	if turretHP <= 0.0:
 		#TODO: animationplayer with sound and effects
