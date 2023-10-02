@@ -218,7 +218,7 @@ func _physics_process(delta):
 	
 	# shoot auto
 	if Input.is_action_pressed("shoot"):
-		weapon_manager.shoot_auto(Globals.machineGunShootDelay)
+		weapon_manager.shoot_auto(Globals.machineGunShootDelay, Globals.machineGunDamage)
 	
 func get_hit():
 	# CURRENT HP - 1, alle machen gleich viel Schaden erstmal

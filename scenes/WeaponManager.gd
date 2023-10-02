@@ -15,7 +15,7 @@ func _process(delta):
 	pass
 
 # gets called when we click shoot
-func shoot_auto(machineGunShootDelay: float):
+func shoot_auto(machineGunShootDelay: float, damage: float):
 	if canShoot:
 		canShoot = false
 		machine_gun_delay_timer.wait_time = machineGunShootDelay
@@ -25,9 +25,10 @@ func shoot_auto(machineGunShootDelay: float):
 	#if animation is not playing: play animation
 		if ray_cast_3d.is_colliding():
 			if ray_cast_3d.get_collider().is_in_group("ENEMY"):
-				ray_cast_3d.get_collider().get_hit()
+				ray_cast_3d.get_collider().get_hit(damage)
 				print("ENEMY HIT")
 
 
 func _on_machine_gun_delay_timer_timeout():
 	canShoot = true
+
