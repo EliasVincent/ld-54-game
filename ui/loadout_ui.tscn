@@ -15,12 +15,20 @@ grow_vertical = 2
 theme = ExtResource("1_3mm8k")
 script = ExtResource("1_mlh0e")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 44.0
+offset_right = 725.0
+offset_bottom = 200.0
+
 [node name="MemoryRemaining" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 65.0
-offset_right = 337.0
-offset_bottom = 133.0
+offset_left = 457.0
+offset_top = 63.0
+offset_right = 651.0
+offset_bottom = 120.0
+bbcode_enabled = true
 text = "10 MB"
 
 [node name="UpgradeContainer" type="FlowContainer" parent="."]
@@ -36,14 +44,6 @@ offset_right = 520.0
 offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HPUpgrade" type="Button" parent="UpgradeContainer"]
-layout_mode = 2
-text = "ADD HP (-2 MB)"
-
-[node name="SpeedUpgrade" type="Button" parent="UpgradeContainer"]
-layout_mode = 2
-text = "ADD SPEED (-4 MB)"
 
 [node name="HPUpgradeToggle" type="CheckButton" parent="UpgradeContainer"]
 layout_mode = 2
@@ -74,7 +74,7 @@ anchor_right = 1.0
 offset_left = -250.0
 offset_top = 25.0
 offset_right = -30.0
-offset_bottom = 265.0
+offset_bottom = 117.0
 grow_horizontal = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="StatsContainer"]
@@ -120,8 +120,16 @@ grow_vertical = 0
 layout_mode = 2
 text = "DEPLOY"
 
-[connection signal="pressed" from="UpgradeContainer/HPUpgrade" to="." method="_on_hp_upgrade_pressed"]
-[connection signal="pressed" from="UpgradeContainer/SpeedUpgrade" to="." method="_on_speed_upgrade_pressed"]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 143.0
+offset_right = 764.0
+offset_bottom = 183.0
+bbcode_enabled = true
+text = "[center]SELECT YOUR UPGRADES"
+fit_content = true
+
 [connection signal="toggled" from="UpgradeContainer/HPUpgradeToggle" to="." method="_on_hp_upgrade_toggle_toggled"]
 [connection signal="toggled" from="UpgradeContainer/FiringSpeedUpgradeToggle" to="." method="_on_firing_speed_upgrade_toggle_toggled"]
 [connection signal="toggled" from="UpgradeContainer/DamageUpgradeToggle" to="." method="_on_damage_upgrade_toggle_toggled"]

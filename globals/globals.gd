@@ -5,7 +5,7 @@ var initialGameTimer: int = 250
 var currentGameTimer : int
 
 var isFS: bool = false
-var memory: int = 8 # in MB
+var memory: int = 6 # in MB
 
 var targetsToHit: int = 10
 
@@ -43,6 +43,9 @@ func _input(event):
 		
 
 # TODO: func for level init
+func level_init():
+	#timer
+	GlobalLogic.start_level_timer()
 
 # TODO: func for handle win condition
 func handleLevelWin():

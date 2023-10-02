@@ -10,6 +10,9 @@ func _ready():
 	for turret in turrets.get_children():
 		initialTurrets += 1
 	print("Initial number of turrets in scene: ", initialTurrets)
+	
+	Globals.level_init()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
