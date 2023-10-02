@@ -13,6 +13,8 @@ func _ready():
 func _process(delta):
 	if Globals.currentGameTimer > 0:
 		isTimerValid = true
+	if Globals.targetsToHit < 1:
+		allTargetsDestroyed = true
 	# TODO: soll man auch weiter können wenn nicht alle erfüllt sind?
 	if isPlayerInside and isTimerValid and allTargetsDestroyed:
 		Globals.handleLevelWin()

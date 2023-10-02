@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbdjmr8d2mkr1"]
+[gd_scene load_steps=8 format=3 uid="uid://cbdjmr8d2mkr1"]
 
 [ext_resource type="Texture2D" uid="uid://cqjq6xa6ybncr" path="res://icon.svg" id="1_4gkib"]
 [ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="2_rrkay"]
 [ext_resource type="PackedScene" uid="uid://bpuqsjdk7xvb3" path="res://actors/turret.tscn" id="3_en4xm"]
-[ext_resource type="PackedScene" uid="uid://bk20b28iiepm8" path="res://actors/bullet.tscn" id="4_m34qk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lj7au"]
 albedo_texture = ExtResource("1_4gkib")
@@ -52,4 +51,3 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.0601996,
 
 [node name="Turret" parent="." instance=ExtResource("3_en4xm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9441, 2.29215, -15.4262)
-spawn_object = ExtResource("4_m34qk")

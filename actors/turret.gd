@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var spawn_object: PackedScene
+@export var spawn_object: PackedScene = preload("res://actors/bullet.tscn")
 var playerPos
 
 @export var turretHP: float = 3.0

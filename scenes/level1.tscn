@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cx23rejctbqbv"]
+[gd_scene load_steps=10 format=3 uid="uid://baqrmd88s8fse"]
 
+[ext_resource type="Script" path="res://scenes/level1.gd" id="1_4vfwp"]
 [ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="1_fv32x"]
+[ext_resource type="PackedScene" uid="uid://dgyfb2u6n33yd" path="res://actors/WinArea.tscn" id="2_xe6to"]
+[ext_resource type="PackedScene" uid="uid://bpuqsjdk7xvb3" path="res://actors/turret.tscn" id="3_f70va"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_2f7la"]
 _surfaces = [{
@@ -27,6 +30,7 @@ background_mode = 2
 sky = SubResource("Sky_3phk0")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_4vfwp")
 
 [node name="TBLoader" type="TBLoader" parent="."]
 map_resource = "res://maps/level1.map"
@@ -50,3 +54,14 @@ environment = SubResource("Environment_cr7b5")
 transform = Transform3D(1, 0, 0, 0, 0.97608, 0.217411, 0, -0.217411, 0.97608, 0, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("1_fv32x")]
+
+[node name="WinArea" parent="." instance=ExtResource("2_xe6to")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -25)
+
+[node name="Turrets" type="Node3D" parent="."]
+
+[node name="Turret" parent="Turrets" instance=ExtResource("3_f70va")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -6)
+
+[node name="Turret2" parent="Turrets" instance=ExtResource("3_f70va")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -11)
