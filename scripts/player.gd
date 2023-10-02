@@ -11,6 +11,8 @@ extends CharacterBody3D
 @onready var animation_player = $nek/head/eyes/AnimationPlayer
 @onready var weapon_manager = $nek/head/eyes/Camera3D/WeaponManager
 
+@onready var hud = $HUD
+
 # speed vars
 var current_speed = 5.0
 
@@ -68,6 +70,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+	if Globals.hudEnabled:
+		hud.visible = true
+	if !Globals.hudEnabled:
+		hud.visible = false
 
 func _input(event):
 	# mouse looking logic

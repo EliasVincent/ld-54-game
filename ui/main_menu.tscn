@@ -39,7 +39,7 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 34.0
-offset_top = -86.0
+offset_top = -135.0
 offset_right = 315.0
 grow_vertical = 0
 
@@ -51,6 +51,16 @@ fit_content = true
 [node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer2"]
 layout_mode = 2
 text = "eliasvsimon"
+fit_content = true
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer2"]
+layout_mode = 2
+text = "SoulPixelIV"
+fit_content = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer2"]
+layout_mode = 2
+text = "DervIX"
 fit_content = true
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]

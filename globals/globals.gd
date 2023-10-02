@@ -5,7 +5,7 @@ var initialGameTimer: int = 250
 var currentGameTimer : int
 
 var isFS: bool = false
-var memory: int = 8 # in MB
+var memory: int = 6 # in MB
 
 var targetsToHit: int = 10
 
