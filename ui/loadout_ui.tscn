@@ -15,6 +15,13 @@ grow_vertical = 2
 theme = ExtResource("1_3mm8k")
 script = ExtResource("1_mlh0e")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 44.0
+offset_right = 725.0
+offset_bottom = 200.0
+
 [node name="MemoryRemaining" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 457.0

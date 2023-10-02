@@ -43,6 +43,9 @@ func _input(event):
 		
 
 # TODO: func for level init
+func level_init():
+	#timer
+	GlobalLogic.start_level_timer()
 
 # TODO: func for handle win condition
 func handleLevelWin():

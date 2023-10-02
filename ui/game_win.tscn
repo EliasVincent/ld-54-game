@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpqrlmncib0i"]
+[gd_scene load_steps=3 format=3 uid="uid://cpqrlmncib0i"]
 
+[ext_resource type="Theme" uid="uid://o0f50tgvg56p" path="res://ui/ui_theme.tres" id="1_7aksd"]
 [ext_resource type="Script" path="res://ui/game_win.gd" id="1_sirex"]
 
 [node name="game_win" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_7aksd")
 script = ExtResource("1_sirex")
 
 [node name="ColorRect" type="ColorRect" parent="."]
