@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1s4bm"]
 [ext_resource type="Script" path="res://scenes/WeaponManager.gd" id="2_xk5og"]
-[ext_resource type="PackedScene" path="res://ui/HUD.tscn" id="3_gbfrb"]
+[ext_resource type="PackedScene" uid="uid://mr75x2dmdqmy" path="res://ui/HUD.tscn" id="3_gbfrb"]
 [ext_resource type="AudioStream" uid="uid://bpsbnod3rjxa0" path="res://assets/audio/sfx/machinegunfire.wav" id="3_wi4a6"]
 [ext_resource type="PackedScene" uid="uid://nx5nynvnlx3q" path="res://assets/actors/machinegun1.glb" id="4_85a40"]
 [ext_resource type="PackedScene" uid="uid://bfa55wkac3xkm" path="res://props/cockpit.tscn" id="5_bau0o"]
@@ -171,7 +171,7 @@ volume_db = -6.638
 
 [node name="RayCast3D" type="RayCast3D" parent="nek/head/eyes/Camera3D/FirePoint"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-target_position = Vector3(0, 0, -30)
+target_position = Vector3(0, 0, -1000)
 
 [node name="Graphics" type="Node3D" parent="nek/head/eyes/Camera3D"]
 transform = Transform3D(0.998843, 0, -0.0480827, 0, 1, 0, 0.0480827, 0, 0.998843, 0.401669, -0.290737, -0.439446)
@@ -190,4 +190,7 @@ libraries = {
 
 [node name="HUD" parent="." instance=ExtResource("3_gbfrb")]
 
+[node name="DamageCooldownTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="nek/head/eyes/Camera3D/WeaponManager/MachineGunDelayTimer" to="nek/head/eyes/Camera3D/WeaponManager" method="_on_machine_gun_delay_timer_timeout"]
+[connection signal="timeout" from="DamageCooldownTimer" to="." method="_on_damage_cooldown_timer_timeout"]

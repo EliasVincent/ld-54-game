@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://icib10iram6s"]
+[gd_scene load_steps=6 format=3 uid="uid://icib10iram6s"]
 
 [ext_resource type="Script" path="res://globals/GlobalLogic.gd" id="1_ics25"]
 [ext_resource type="AudioStream" uid="uid://1kl5t4wlaj8d" path="res://assets/audio/sfx/hit1.wav" id="2_5k3fj"]
+[ext_resource type="AudioStream" uid="uid://m83nj1p77x2k" path="res://assets/audio/sfx/dash.wav" id="3_7cuev"]
+[ext_resource type="AudioStream" uid="uid://deprn3icqta1f" path="res://assets/audio/sfx/jump3.wav" id="4_0g6km"]
+[ext_resource type="AudioStream" uid="uid://cy5nsoswqjjm5" path="res://assets/audio/sfx/hurt.wav" id="5_paqsj"]
 
 [node name="GlobalLogic" type="Node"]
 script = ExtResource("1_ics25")
@@ -13,5 +16,14 @@ wait_time = 300.0
 
 [node name="HitSound" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource("2_5k3fj")
+
+[node name="DashSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("3_7cuev")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_0g6km")
+
+[node name="HurtSound" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_paqsj")
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

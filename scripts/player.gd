@@ -12,6 +12,9 @@ extends CharacterBody3D
 @onready var weapon_manager = $nek/head/eyes/Camera3D/WeaponManager
 
 @onready var hud = $HUD
+@onready var damage_cooldown_timer = $DamageCooldownTimer
+
+var canGetHit: bool = true
 
 # speed vars
 var current_speed = 5.0
@@ -112,6 +115,7 @@ func _physics_process(delta):
 		standing_collision_shape.disabled = false
 		crouching_collision_shape.disabled = true
 		if Input.is_action_just_pressed("sprint") && (Input.is_action_pressed("left") || Input.is_action_pressed("right") || Input.is_action_pressed("backward")) && input_dir != Vector2.ZERO && !dodging && !sprinting:
+			GlobalLogic.playDashSound()
 			dodging = true
 			dodge_timer = dodge_timer_max
 			dodge_vector = input_dir
@@ -192,6 +196,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 		animation_player.play("jump")
+		GlobalLogic.playJumpSound()
 		
 	# handle landing
 	if is_on_floor():
@@ -230,4 +235,13 @@ func _physics_process(delta):
 func get_hit():
 	# CURRENT HP - 1, alle machen gleich viel Schaden erstmal
 	print("HURT")
+	if canGetHit:
+		canGetHit = false
+		damage_cooldown_timer.start()
+		Globals.PLAYER_STATS.PLAYER_HP -= 5
+		GlobalLogic.playHurtSound()
 	pass
+
+
+func _on_damage_cooldown_timer_timeout():
+	canGetHit = true
