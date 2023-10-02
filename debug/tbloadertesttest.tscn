@@ -1,14 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://crn8l7q5orhg7"]
+[gd_scene load_steps=13 format=3 uid="uid://cowe5x652oad4"]
 
-[ext_resource type="Texture2D" uid="uid://kn1msfkvsktn" path="res://textures/black.png" id="1_o7qhq"]
-[ext_resource type="Texture2D" uid="uid://c2v6q3f20jgyr" path="res://textures/white_test_cube.png" id="1_oa5lf"]
-[ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="3_81ces"]
+[ext_resource type="Texture2D" uid="uid://c2v6q3f20jgyr" path="res://textures/white_test_cube.png" id="1_i8vf0"]
+[ext_resource type="Texture2D" uid="uid://kn1msfkvsktn" path="res://textures/black.png" id="2_0ysww"]
+[ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="3_x7q4m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xguxb"]
-albedo_texture = ExtResource("1_oa5lf")
+albedo_texture = ExtResource("1_i8vf0")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uw6x8"]
-albedo_texture = ExtResource("1_o7qhq")
+albedo_texture = ExtResource("2_0ysww")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_if5nb"]
 _surfaces = [{
@@ -89,7 +89,5 @@ mesh = SubResource("SphereMesh_y04em")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("SphereShape3D_joxm7")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14, 3, 0)
-
-[node name="player" parent="." instance=ExtResource("3_81ces")]
+[node name="player" parent="." instance=ExtResource("3_x7q4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1421, 23.4685, 20.5841)

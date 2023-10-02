@@ -47,7 +47,7 @@ var head_bobbing_current_intensity = 0.0
 # movement cars
 var crouching_depth = -0.5
 
-const jump_velocity = 4.5
+const jump_velocity = 5.0
 
 var lerp_speed = 1.0
 var air_lerp_speed = 0.2
@@ -91,6 +91,8 @@ func _physics_process(delta):
 		standing_collision_shape.disabled = true
 		crouching_collision_shape.disabled = false
 		
+		dodge_timer = 0
+		dodging = false
 		
 		walking = false
 		sprinting = false
@@ -118,6 +120,7 @@ func _physics_process(delta):
 		
 		if dodging:
 			dodge_timer -= delta
+			print(dodge_timer)
 			if dodge_side < 0:
 				eyes.rotation.z = lerp(eyes.rotation.z, -deg_to_rad(-7.0), delta*lerp_speed*2)
 			elif dodge_side > 0:
@@ -191,7 +194,7 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	# movement speed if on floor or in air
-	if is_on_floor():
+	if is_on_floor() || sprinting:
 		direction = lerp(direction,(transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), delta*lerp_speed*2.0)
 	else:
 		if input_dir != Vector2.ZERO:

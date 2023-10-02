@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://dogwbglgjykmr"]
+
+[ext_resource type="PackedScene" uid="uid://dbe83851vfr8h" path="res://scenes/player.tscn" id="1_umgrq"]
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_7gqe1"]
+item/0/name = ""
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_akg68"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_plbi0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_arwdc"]
+
+[sub_resource type="Sky" id="Sky_y0s8l"]
+sky_material = SubResource("ProceduralSkyMaterial_arwdc")
+
+[sub_resource type="Environment" id="Environment_i2ibp"]
+background_mode = 2
+sky = SubResource("Sky_y0s8l")
+
+[node name="basic_level" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("1_umgrq")]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="GridMap" type="GridMap" parent="Node3D"]
+mesh_library = SubResource("MeshLibrary_7gqe1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/StaticBody3D"]
+mesh = SubResource("BoxMesh_akg68")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_plbi0")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i2ibp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5, 0)
