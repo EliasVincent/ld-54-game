@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1s4bm"]
 [ext_resource type="Script" path="res://scenes/WeaponManager.gd" id="2_xk5og"]
-[ext_resource type="PackedScene" uid="uid://mr75x2dmdqmy" path="res://ui/HUD.tscn" id="3_gbfrb"]
+[ext_resource type="PackedScene" path="res://ui/HUD.tscn" id="3_gbfrb"]
 [ext_resource type="AudioStream" uid="uid://bpsbnod3rjxa0" path="res://assets/audio/sfx/machinegunfire.wav" id="3_wi4a6"]
 [ext_resource type="PackedScene" uid="uid://nx5nynvnlx3q" path="res://assets/actors/machinegun1.glb" id="4_85a40"]
 [ext_resource type="PackedScene" uid="uid://bfa55wkac3xkm" path="res://props/cockpit.tscn" id="5_bau0o"]
