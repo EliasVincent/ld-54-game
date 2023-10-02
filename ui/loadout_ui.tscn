@@ -45,6 +45,27 @@ text = "ADD HP (-2 MB)"
 layout_mode = 2
 text = "ADD SPEED (-4 MB)"
 
+[node name="HPUpgradeToggle" type="CheckButton" parent="UpgradeContainer"]
+layout_mode = 2
+text = "HP UPGRADE | 2MB"
+
+[node name="FiringSpeedUpgradeToggle" type="CheckButton" parent="UpgradeContainer"]
+layout_mode = 2
+text = "FIRING SPEED | 2MB"
+
+[node name="DamageUpgradeToggle" type="CheckButton" parent="UpgradeContainer"]
+layout_mode = 2
+text = "DAMAGE | 2MB"
+
+[node name="HUDUpgradeToggle" type="CheckButton" parent="UpgradeContainer"]
+layout_mode = 2
+button_pressed = true
+text = "HUD | 2MB"
+
+[node name="SpeedUpgradeToggle" type="CheckButton" parent="UpgradeContainer"]
+layout_mode = 2
+text = "SPEED | 2MB"
+
 [node name="StatsContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 1
@@ -83,3 +104,8 @@ volume_db = -2.404
 
 [connection signal="pressed" from="UpgradeContainer/HPUpgrade" to="." method="_on_hp_upgrade_pressed"]
 [connection signal="pressed" from="UpgradeContainer/SpeedUpgrade" to="." method="_on_speed_upgrade_pressed"]
+[connection signal="toggled" from="UpgradeContainer/HPUpgradeToggle" to="." method="_on_hp_upgrade_toggle_toggled"]
+[connection signal="toggled" from="UpgradeContainer/FiringSpeedUpgradeToggle" to="." method="_on_firing_speed_upgrade_toggle_toggled"]
+[connection signal="toggled" from="UpgradeContainer/DamageUpgradeToggle" to="." method="_on_damage_upgrade_toggle_toggled"]
+[connection signal="toggled" from="UpgradeContainer/HUDUpgradeToggle" to="." method="_on_hud_upgrade_toggle_toggled"]
+[connection signal="toggled" from="UpgradeContainer/SpeedUpgradeToggle" to="." method="_on_speed_upgrade_toggle_toggled"]
