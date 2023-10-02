@@ -269,6 +269,10 @@ sky_material = SubResource("ProceduralSkyMaterial_awqkc")
 background_mode = 2
 sky = SubResource("Sky_3phk0")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5l22x"]
+height = 4.0
+radius = 33.454
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_4vfwp")
 
@@ -366,3 +370,12 @@ transform = Transform3D(-0.246373, 0, -0.969175, 0, 1, 0, 0.969175, 0, -0.246373
 
 [node name="DeathTriggerOrientationPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100, 0)
+
+[node name="DeathArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -28, -85)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+shape = SubResource("CylinderShape3D_5l22x")
+
+[connection signal="body_entered" from="DeathArea" to="." method="_on_death_area_body_entered"]
