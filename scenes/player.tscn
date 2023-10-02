@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dbe83851vfr8h"]
+[gd_scene load_steps=14 format=3 uid="uid://dbe83851vfr8h"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1s4bm"]
 [ext_resource type="Script" path="res://scenes/WeaponManager.gd" id="2_xk5og"]
 [ext_resource type="PackedScene" uid="uid://mr75x2dmdqmy" path="res://ui/HUD.tscn" id="3_gbfrb"]
 [ext_resource type="AudioStream" uid="uid://bpsbnod3rjxa0" path="res://assets/audio/sfx/machinegunfire.wav" id="3_wi4a6"]
 [ext_resource type="PackedScene" uid="uid://nx5nynvnlx3q" path="res://assets/actors/machinegun1.glb" id="4_85a40"]
+[ext_resource type="PackedScene" uid="uid://bfa55wkac3xkm" path="res://props/cockpit.tscn" id="5_bau0o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y64oc"]
 
@@ -178,6 +179,9 @@ transform = Transform3D(0.998843, 0, -0.0480827, 0, 1, 0, 0.0480827, 0, 0.998843
 [node name="machinegun1" parent="nek/head/eyes/Camera3D/Graphics" instance=ExtResource("4_85a40")]
 
 [node name="MachinegunAnimationPlayer" type="AnimationPlayer" parent="nek/head/eyes/Camera3D"]
+
+[node name="Cockpit" parent="nek/head/eyes/Camera3D" instance=ExtResource("5_bau0o")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.187779, -0.0565503)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="nek/head/eyes"]
 libraries = {
