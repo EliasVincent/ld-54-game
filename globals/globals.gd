@@ -9,6 +9,8 @@ var memory: int = 10 # in MB
 
 var targetsToHit: int = 10
 
+var machineGunShootDelay: float = 0.5
+
 # TODO: tatsaechliche stats
 # Wir koennen es so machen: entweder diese Stats sind die
 # Ausgangsstats, also resetten sich sich jedes mal, 

@@ -218,5 +218,5 @@ func _physics_process(delta):
 	
 	# shoot auto
 	if Input.is_action_pressed("shoot"):
-		weapon_manager.shoot_auto()
+		weapon_manager.shoot_auto(Globals.machineGunShootDelay)
 	
