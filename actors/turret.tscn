@@ -19,6 +19,11 @@ shape = SubResource("BoxShape3D_ffc7x")
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00144819, 0.83639, -0.6)
+light_color = Color(0.894118, 0.12549, 0.176471, 1)
+light_energy = 5.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="turret3"]

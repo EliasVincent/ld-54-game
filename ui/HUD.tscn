@@ -48,6 +48,7 @@ grow_vertical = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Container"]
 texture = ExtResource("3_lou6b")
+offset = Vector2(21, 19)
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -76,6 +77,7 @@ text = "HP: "
 fit_content = true
 
 [node name="TargetsLabel" type="RichTextLabel" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "TARGETS:"
 fit_content = true

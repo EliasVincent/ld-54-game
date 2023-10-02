@@ -42,9 +42,14 @@ func _input(event):
 		AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0))
 		
 
+func _process(delta):
+	if PLAYER_STATS.PLAYER_HP <= 0:
+		handleLevelTimerTimeout()
+
 # TODO: func for level init
 func level_init():
 	#timer
+	PLAYER_STATS.PLAYER_HP = 100
 	GlobalLogic.start_level_timer()
 
 # TODO: func for handle win condition

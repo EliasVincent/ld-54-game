@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1owd87kxcafb"]
+[gd_scene load_steps=4 format=3 uid="uid://b1owd87kxcafb"]
 
 [ext_resource type="Script" path="res://ui/main_menu.gd" id="1_i3uqf"]
 [ext_resource type="Theme" uid="uid://o0f50tgvg56p" path="res://ui/ui_theme.tres" id="2_k07vd"]
+[ext_resource type="Texture2D" uid="uid://b4i28gbm7rdpq" path="res://assets/x13.png" id="3_aukvk"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -13,6 +14,25 @@ grow_vertical = 2
 theme = ExtResource("2_k07vd")
 script = ExtResource("1_i3uqf")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1174.0
+offset_bottom = 661.0
+color = Color(0.0705882, 0.0627451, 0.0156863, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -618.0
+offset_top = -34.0
+offset_right = 1302.0
+offset_bottom = 1046.0
+grow_horizontal = 2
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("3_aukvk")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -21,9 +41,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -178.0
-offset_top = -20.0
+offset_top = 98.16
 offset_right = 178.0
-offset_bottom = 163.0
+offset_bottom = 281.16
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -63,7 +83,7 @@ fit_content = true
 
 [node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer2"]
 layout_mode = 2
-text = "DervIX"
+text = "DervlX"
 fit_content = true
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]

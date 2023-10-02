@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjyrg3k73ccb"]
+[gd_scene load_steps=6 format=3 uid="uid://bjyrg3k73ccb"]
 
 [ext_resource type="Theme" uid="uid://o0f50tgvg56p" path="res://ui/ui_theme.tres" id="1_3mm8k"]
 [ext_resource type="Script" path="res://ui/loadout_ui.gd" id="1_mlh0e"]
 [ext_resource type="AudioStream" uid="uid://botiijpxkyqam" path="res://assets/audio/sfx/error1.wav" id="2_kvabq"]
 [ext_resource type="AudioStream" uid="uid://clujv1rpg4wh0" path="res://assets/audio/sfx/upgrade_succes_short.wav" id="3_3w80i"]
+[ext_resource type="Texture2D" uid="uid://c8tvw40nab2b3" path="res://assets/upgradescreen.png" id="3_t2vv7"]
 
 [node name="loadout_ui" type="Control"]
 layout_mode = 3
@@ -14,6 +15,13 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_3mm8k")
 script = ExtResource("1_mlh0e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_t2vv7")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
