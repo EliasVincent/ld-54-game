@@ -6,11 +6,12 @@ var playerPos
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	playerPos = get_tree().get_nodes_in_group("PLAYER")[0].global_position
+	playerPos.y += 0.5
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	global_position = global_position.move_toward(playerPos, delta * 10)
+	global_position = global_position.move_toward(playerPos, delta * 30)
 	
 
 
@@ -24,3 +25,7 @@ func _on_area_3d_body_entered(body):
 		pass
 	else:
 		self.queue_free()
+
+
+func _on_timer_timeout():
+	self.queue_free()

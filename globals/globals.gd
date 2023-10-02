@@ -9,7 +9,7 @@ var memory: int = 6 # in MB
 
 var targetsToHit: int = 10
 
-var machineGunShootDelay: float = 0.5
+var machineGunShootDelay: float = 0.3
 var machineGunDamage: float = 1.0
 
 var hudEnabled: bool = true

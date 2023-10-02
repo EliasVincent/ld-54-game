@@ -19,11 +19,12 @@ func _process(delta):
 
 func _on_timer_timeout():
 	var bullet = spawn_object.instantiate()
-	bullet.global_position = Vector3(global_position.x , global_position.y + 1, global_position.z)
+	bullet.global_position = Vector3(global_position.x , global_position.y + 1.3, global_position.z)
 	get_parent().add_child(bullet)
 	#print("Bullet Spawned!")
 
 func get_hit(damage):
+	GlobalLogic.playHitSound()
 	turretHP -= damage
 	if turretHP <= 0.0:
 		#TODO: animationplayer with sound and effects
