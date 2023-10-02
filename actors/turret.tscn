@@ -11,7 +11,7 @@ size = Vector3(1, 2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ffc7x"]
 
-[node name="Turret" type="StaticBody3D"]
+[node name="Turret" type="StaticBody3D" groups=["ENEMY"]]
 script = ExtResource("1_b3b5k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

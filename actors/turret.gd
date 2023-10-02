@@ -22,3 +22,7 @@ func _on_timer_timeout():
 	bullet.global_position = Vector3(global_position.x , global_position.y + 1, global_position.z)
 	get_parent().add_child(bullet)
 	print("Bullet Spawned!")
+
+func get_hit():
+	# TODO: HP and so son and so on and aaa
+	pass

@@ -9,6 +9,7 @@ extends CharacterBody3D
 @onready var ray_cast_3d = $RayCast3D
 @onready var camera_3d = $nek/head/eyes/Camera3D
 @onready var animation_player = $nek/head/eyes/AnimationPlayer
+@onready var weapon_manager = $nek/head/eyes/Camera3D/WeaponManager
 
 # speed vars
 var current_speed = 5.0
@@ -212,4 +213,7 @@ func _physics_process(delta):
 	last_velocity = velocity
 	move_and_slide()
 	
+	# shoot auto
+	if Input.is_action_pressed("shoot"):
+		weapon_manager.shoot_auto()
 	
