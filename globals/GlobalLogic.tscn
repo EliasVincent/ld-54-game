@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://icib10iram6s"]
+
+[ext_resource type="Script" path="res://globals/GlobalLogic.gd" id="1_ics25"]
+
+[node name="GlobalLogic" type="Node"]
+script = ExtResource("1_ics25")
+
+[node name="GameTimer" type="Timer" parent="."]
+wait_time = 300.0
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_game_timer_timeout"]

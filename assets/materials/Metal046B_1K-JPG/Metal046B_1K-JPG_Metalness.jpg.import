@@ -2,20 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2v6q3f20jgyr"
-path="res://.godot/imported/white_test_cube.png-5ce1d036261db3021731e702a85cd358.ctex"
+uid="uid://7e1tvp8x373"
+path.s3tc="res://.godot/imported/Metal046B_1K-JPG_Metalness.jpg-a9d0b03ef50ace3caf9c29c6365983de.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://textures/white_test_cube.png"
-dest_files=["res://.godot/imported/white_test_cube.png-5ce1d036261db3021731e702a85cd358.ctex"]
+source_file="res://assets/materials/Metal046B_1K-JPG/Metal046B_1K-JPG_Metalness.jpg"
+dest_files=["res://.godot/imported/Metal046B_1K-JPG_Metalness.jpg-a9d0b03ef50ace3caf9c29c6365983de.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -23,7 +24,7 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
+roughness/mode=0
 roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
