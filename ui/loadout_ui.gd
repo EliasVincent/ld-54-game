@@ -17,7 +17,9 @@ extends Control
 
 
 func _ready():
-	pass
+	# RESET VALUES
+  # If we want multiple levels, we prob don't want this anymore
+	Globals.resetLoadoutValues()
 
 func _process(delta):
 	# TEXT
@@ -69,16 +71,16 @@ func apply_downgrade(memoryToAdd: int, PLAYER_STAT, amountToSubtract, toggle):
 
 func _on_hp_upgrade_toggle_toggled(button_pressed):
 	if button_pressed:
-		apply_upgrade(2, "PLAYER_HP", 20, hp_upgrade_toggle)
+		apply_upgrade(2, "PLAYER_HP", 20.0, hp_upgrade_toggle)
 	else:
-		apply_downgrade(2, "PLAYER_HP", 20, hp_upgrade_toggle)
+		apply_downgrade(2, "PLAYER_HP", 20.0, hp_upgrade_toggle)
 
 
 func _on_firing_speed_upgrade_toggle_toggled(button_pressed):
 	if button_pressed:
-		apply_upgrade(2, "machineGunShootDelay", 0.25, firing_speed_upgrade_toggle)
+		apply_upgrade(2, "machineGunShootDelay", 0.1, firing_speed_upgrade_toggle)
 	else:
-		apply_downgrade(2, "machineGunShootDelay", 0.25, firing_speed_upgrade_toggle)
+		apply_downgrade(2, "machineGunShootDelay", 0.1, firing_speed_upgrade_toggle)
 
 
 func _on_damage_upgrade_toggle_toggled(button_pressed):

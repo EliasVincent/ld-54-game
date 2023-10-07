@@ -24,6 +24,18 @@ var PLAYER_STATS = {
 	PLAYER_SPEED = 1.5
 }
 
+# original stats
+# this is bad
+# if we want stats to carry over to next level, we need to save them somewhere
+const initialMemory: int = 6
+const initialMachineGunShootDelay: float = 0.3
+const initialMachineGunDamage: float = 1.0
+const initialHudEnabled: bool = true
+const INITIAL_PLAYER_STATS = {
+	PLAYER_HP = 100,
+	PLAYER_SPEED = 1.5
+}
+
 func _ready():
 	currentGameTimer = initialGameTimer
 
@@ -46,10 +58,10 @@ func _process(delta):
 	if PLAYER_STATS.PLAYER_HP <= 0:
 		handleLevelTimerTimeout()
 
-# TODO: func for level init
+
 func level_init():
 	#timer
-	PLAYER_STATS.PLAYER_HP = 100
+	#PLAYER_STATS.PLAYER_HP = 100 WHY DID YOU DO THAT ELIAS WHY
 	GlobalLogic.start_level_timer()
 
 # TODO: func for handle win condition
@@ -60,3 +72,11 @@ func handleLevelWin():
 func handleLevelTimerTimeout():
 	print("globals.handleLevelTimerTimeout called. Game over!?")
 	get_tree().change_scene_to_file("res://ui/game_over.tscn")
+
+func resetLoadoutValues():
+	memory = initialMemory
+	machineGunShootDelay = initialMachineGunShootDelay
+	machineGunDamage = initialMachineGunDamage
+	hudEnabled = initialHudEnabled
+	PLAYER_STATS.PLAYER_HP = INITIAL_PLAYER_STATS.PLAYER_HP
+	PLAYER_STATS.PLAYER_SPEED = INITIAL_PLAYER_STATS.PLAYER_SPEED
