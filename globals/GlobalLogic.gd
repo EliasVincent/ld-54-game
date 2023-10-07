@@ -18,6 +18,7 @@ func _on_game_timer_timeout():
 	Globals.handleLevelTimerTimeout()
 
 func start_level_timer():
+	game_timer.stop()
 	game_timer.wait_time = Globals.initialGameTimer
 	game_timer.start()
 
