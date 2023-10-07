@@ -14,6 +14,9 @@ extends CharacterBody3D
 @onready var hud = $HUD
 @onready var damage_cooldown_timer = $DamageCooldownTimer
 
+@onready var gun_cam = $nek/head/eyes/Camera3D/SubViewportContainer/SubViewport/GunCam
+
+
 var canGetHit: bool = true
 
 # speed vars
@@ -235,6 +238,9 @@ func _physics_process(delta):
 func _process(delta):
 	if self.global_position.y <= -100:
 		get_tree().change_scene_to_file("res://ui/game_over.tscn")
+	gun_cam.global_transform = camera_3d.global_transform
+	#gun_cam.global_position = camera_3d.global_position
+	gun_cam.global_rotation = camera_3d.global_rotation
 
 func get_hit():
 	# CURRENT HP - 1, alle machen gleich viel Schaden erstmal

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/WeaponManager.gd" id="2_xk5og"]
 [ext_resource type="PackedScene" uid="uid://mr75x2dmdqmy" path="res://ui/HUD.tscn" id="3_gbfrb"]
 [ext_resource type="AudioStream" uid="uid://bpsbnod3rjxa0" path="res://assets/audio/sfx/machinegunfire.wav" id="3_wi4a6"]
-[ext_resource type="PackedScene" uid="uid://nx5nynvnlx3q" path="res://assets/actors/machinegun1.glb" id="4_85a40"]
+[ext_resource type="PackedScene" uid="uid://bw7kyo431ad3v" path="res://assets/props/machinegun_1_MESH.tscn" id="4_rr2ed"]
 [ext_resource type="PackedScene" uid="uid://bfa55wkac3xkm" path="res://props/cockpit.tscn" id="5_bau0o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_y64oc"]
@@ -38,6 +38,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_0p0p8"]
 resource_name = "dodge_end"
@@ -61,6 +85,30 @@ tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0174533, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.05, 0), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
@@ -94,6 +142,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(-0.0436332, 0, 0), Vector3(0.0872665, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.1, 0), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.0436332, 0, 0), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_8gfbc"]
 resource_name = "land"
@@ -117,6 +189,30 @@ tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0872665, 0, 0), Vector3(-0.0872665, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.1, 0), Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D/SubViewportContainer/SubViewport/GunCam:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
@@ -155,6 +251,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 [node name="eyes" type="Node3D" parent="nek/head"]
 
 [node name="Camera3D" type="Camera3D" parent="nek/head/eyes"]
+cull_mask = 1048573
 
 [node name="WeaponManager" type="Node3D" parent="nek/head/eyes/Camera3D"]
 script = ExtResource("2_xk5og")
@@ -173,15 +270,31 @@ volume_db = -6.638
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 target_position = Vector3(0, 0, -1000)
 
-[node name="Graphics" type="Node3D" parent="nek/head/eyes/Camera3D"]
-transform = Transform3D(0.998843, 0, -0.0480827, 0, 1, 0, 0.0480827, 0, 0.998843, 0.401669, -0.290737, -0.439446)
+[node name="Cockpit" parent="nek/head/eyes/Camera3D" instance=ExtResource("5_bau0o")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.187779, -0.0565503)
 
-[node name="machinegun1" parent="nek/head/eyes/Camera3D/Graphics" instance=ExtResource("4_85a40")]
+[node name="Graphics" type="Node3D" parent="nek/head/eyes/Camera3D"]
+transform = Transform3D(0.998843, 0, -0.0480827, 0, 1, 0, 0.0480827, 0, 0.998843, 0.413013, -0.290737, -0.439446)
+
+[node name="machinegun1" parent="nek/head/eyes/Camera3D/Graphics" instance=ExtResource("4_rr2ed")]
 
 [node name="MachinegunAnimationPlayer" type="AnimationPlayer" parent="nek/head/eyes/Camera3D"]
 
-[node name="Cockpit" parent="nek/head/eyes/Camera3D" instance=ExtResource("5_bau0o")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.187779, -0.0565503)
+[node name="SubViewportContainer" type="SubViewportContainer" parent="nek/head/eyes/Camera3D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="nek/head/eyes/Camera3D/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="GunCam" type="Camera3D" parent="nek/head/eyes/Camera3D/SubViewportContainer/SubViewport"]
+cull_mask = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="nek/head/eyes"]
 libraries = {

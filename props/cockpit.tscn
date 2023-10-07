@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfa55wkac3xkm"]
 
-[ext_resource type="PackedScene" uid="uid://3imvhn7d4vx3" path="res://assets/props/cockpit2.glb" id="1_e8cn1"]
+[ext_resource type="PackedScene" uid="uid://cmb3d7v8si2gy" path="res://assets/props/cockpit_2_MESH.tscn" id="1_yk220"]
 
 [node name="Cockpit" type="Node3D"]
 
-[node name="cockpit2" parent="." instance=ExtResource("1_e8cn1")]
+[node name="cockpit2" parent="." instance=ExtResource("1_yk220")]
